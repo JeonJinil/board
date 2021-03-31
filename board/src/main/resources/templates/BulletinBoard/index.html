@@ -1,0 +1,15 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+
+<!--/*@thymesVar id="person" type="com.example.demo.Person"*/-->
+<!--/*@thymesVar id="name" type="String"*/-->
+<!--/*@thymesVar id="age" type="int"*/-->
+<div class="container">
+    <h1 th:text = "게시판"></h1>
+    <h1 th:text = "'안녕하세요'+${myData.userId}+'님'"></h1>
+    <h1 th:text = "${myData.userPw}"></h1>
+    <button type="button" onclick="location.href='/'">뒤로 가기</button>
+</div> <!-- /container -->
+</body>
+</html>

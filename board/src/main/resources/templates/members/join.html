@@ -1,0 +1,19 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+<div class="container">
+    <form action="/members/new" method="post">
+        <div class="form-group">
+            <label for="userId">userId</label>
+            <input type="text" id="userId" name="userId" placeholder="id"/>
+        </div>
+        <div class="form-group">
+            <label for="userPw">UserPw</label>
+            <input type="text" id="userPw" name="userPw" placeholder="pw"/>
+        </div>
+        <button type="submit">등록</button>
+    </form>
+</div> <!-- /container -->
+<button type="button" onclick="location.href='/'">뒤로 가기</button>
+</body>
+</html>

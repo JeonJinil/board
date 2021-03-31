@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+<div class="container">
+    <div>
+        <table>
+            <thead>
+            <tr>
+                <th>#</th>
+                <th>UserId</th>
+                <th>UserPw</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="member : ${members}">
+                <td th:text="${member.id}"></td>
+                <td th:text="${member.userId}"></td>
+                <td th:text="${member.userPw}"></td>
+            </tr>
+            </tbody>
+        </table>
+        <h1 th:text = "${test}"></h1>
+    </div>
+    <button type="button" onclick="location.href='/'">뒤로 가기</button>
+</div> <!-- /container -->
+</body>
+</html>

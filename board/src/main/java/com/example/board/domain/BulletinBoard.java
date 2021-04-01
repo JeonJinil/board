@@ -1,7 +1,7 @@
 package com.example.board.domain;
 
 import javax.persistence.*;
-import java.sql.Date;
+import java.util.Date;
 
 @Entity
 public class BulletinBoard {
@@ -13,9 +13,20 @@ public class BulletinBoard {
     @Column
     private String content;
     @Column
-    private Long member_id;
+    private Long memberId;
     @Column
-    private Date write_date;
+    private Date writeDate;
+
+    public BulletinBoard(String title, String content, Long memberId, Date writeDate) {
+        this.title = title;
+        this.content = content;
+        this.memberId = memberId;
+        this.writeDate = writeDate;
+    }
+
+    public BulletinBoard() {
+
+    }
 
     public Long getId() {
         return id;
@@ -41,19 +52,19 @@ public class BulletinBoard {
         this.content = content;
     }
 
-    public Long getMember_id() {
-        return member_id;
+    public Long getMemberId() {
+        return memberId;
     }
 
-    public void setMember_id(Long member_id) {
-        this.member_id = member_id;
+    public void setMemberId(Long member_id) {
+        this.memberId = member_id;
     }
 
-    public Date getWrite_date() {
-        return write_date;
+    public Date getWriteDate() {
+        return writeDate;
     }
 
-    public void setWrite_date(Date write_date) {
-        this.write_date = write_date;
+    public void setWriteDate(Date write_date) {
+        this.writeDate = write_date;
     }
 }

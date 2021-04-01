@@ -49,7 +49,7 @@ public class MemberContorller {
         if(optionalMember.isPresent()){
             System.out.println(optionalMember.get().getUserId());
             model.addAttribute("myData" ,optionalMember.get());
-            return "/BulletinBoard/index";
+            return "/home";
         }
 
         return "redirect:/";

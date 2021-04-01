@@ -7,9 +7,35 @@
 <!--/*@thymesVar id="age" type="int"*/-->
 <div class="container">
     <h1 th:text = "게시판"></h1>
-    <h1 th:text = "'안녕하세요'+${myData.userId}+'님'"></h1>
-    <h1 th:text = "${myData.userPw}"></h1>
+
+
+    <table>
+        <thead>
+        <tr>
+            <th>#</th>
+            <th>제목</th>
+            <th>작성자</th>
+            <th>작성 날자</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="board : ${boards}">
+            <td th:text="${board.id}"></td>
+            <td >
+                <a th:href='@{/BulletinBoard/show(boardId = ${board.id})}'>
+                    <span th:text="${board.title}"/>
+                </a>
+            </td>
+            <td th:text="${board.memberId}"></td>
+            <td th:text="${board.writeDate}"></td>
+        </tr>
+        </tbody>
+    </table>
+
+    <button type="button" onclick="location.href='/BulletinBoard/writeBoardForm'">글쓰기</button>
     <button type="button" onclick="location.href='/'">뒤로 가기</button>
 </div> <!-- /container -->
 </body>
 </html>
+
+<!--onclick='th:href="@{/BulletinBoard/show(boardId=${board.id})}"'>-->

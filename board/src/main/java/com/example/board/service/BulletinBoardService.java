@@ -33,4 +33,13 @@ public class BulletinBoardService {
         return bulletinBoardRepository.findById(id);
     }
 
+    public void deleteById(Long id){
+        bulletinBoardRepository.deleteAllById(id);
+    }
+
+    public void updateTitleAndContent(String title, String content, Long id){
+        BulletinBoard bulletinBoard =  bulletinBoardRepository.findById(id).get();
+        bulletinBoard.update(title,content);
+    }
+
 }

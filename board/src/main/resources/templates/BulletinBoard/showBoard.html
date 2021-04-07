@@ -12,8 +12,8 @@
 <h1 th:text = "'작성일'+${board.writeDate}"></h1>
 <h1 th:text = "'내용 : '+${board.content}"></h1>
 
-<button type="button" onclick="location.href='/BulletinBoard/modify'">수정</button>
-<button type="button" onclick="location.href='/BulletinBoard/delete'">삭제</button>
+<button type="button" th:onclick="'location.href=\'/BulletinBoard/modify?boardId='+${board.id}+ '\''">수정</button>
+<button type="button" th:onclick="'location.href=\'/BulletinBoard/delete?boardId='+${board.id}+ '\''">삭제</button>
 <button type="button" onclick="location.href='/BulletinBoard'">뒤로 가기</button>
 </body>
 </html>

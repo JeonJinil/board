@@ -67,4 +67,9 @@ public class BulletinBoard {
     public void setWriteDate(Date write_date) {
         this.writeDate = write_date;
     }
+
+    public void update(String title, String content) {
+        this.title = title;
+        this.content = content;
+    }
 }

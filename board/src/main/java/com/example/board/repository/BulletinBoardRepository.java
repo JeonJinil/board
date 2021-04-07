@@ -11,4 +11,5 @@ public interface BulletinBoardRepository extends JpaRepository <BulletinBoard,Lo
     Optional<BulletinBoard> findById(Long id);
     List<BulletinBoard> findByMemberId(Long member_id);
     List<BulletinBoard> findAll();
+    void deleteAllById(Long member_id);
 }
